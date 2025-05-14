@@ -1,12 +1,12 @@
-const text = "Welcome to Convert My Time!"; 
+const text = "Welcome to Convert My Time!";
   let i = 0;
 
   function typeWriter() {
     if (i < text.length) {
-      document.getElementById("welcome").innerHTML += text.charAt(i);
+      document.getElementById("typed-text").textContent += text.charAt(i);
       i++;
-      setTimeout(typeWriter, 100); 
+      setTimeout(typeWriter, 200);
     }
   }
 
-  window.onload = typeWriter; 
+  window.onload = typeWriter;
