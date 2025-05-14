@@ -1,4 +1,8 @@
 const text = "Welcome to Convert My Time!";
+let images = ["public\Images\airport-632290_1280.jpg", "public\Images\airport-2373727_1280.jpg"]
+ for (let i=0; i<=images.length; i++){
+    
+ }
   let i = 0;
 
   function typeWriter() {
