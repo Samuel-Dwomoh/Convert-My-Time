@@ -22,9 +22,15 @@ let currentIndex = 0;
       document.getElementById("typed-text").textContent += text.charAt(i);
       i++;
       setTimeout(typeWriter, 200);
-    } else
-    document.getElementById("cursor").style.display = "none";
+    } else {
+      setTimeout(() => {
+        document.getElementById("typed-text").textContent = "";
+        i = 0;
+        typeWriter();
+      }, 7000); 
+    }
   }
+   
 
    setInterval(() => {
     currentIndex = (currentIndex + 1) % images.length;
