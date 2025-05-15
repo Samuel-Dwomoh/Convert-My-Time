@@ -33,8 +33,8 @@ let currentIndex = 0;
     setTimeout(() => {
       heroImage.src = images[currentIndex];
       heroImage.classList.remove("opacity-0");
-    }, 1000);
-  }, 5000); 
+    }, 0);
+  }, 9000); 
 
 
   window.onload = typeWriter;
