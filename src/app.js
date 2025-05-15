@@ -1,5 +1,5 @@
 const text = "Welcome to Convert My Time!";
-let images =  ["/Images/glenn-carstens-peters-ZWD3Dx6aUJg-unsplash.jpg", "/Images/tird.jpg", "Images/people.jpg", "Images/andres.jpg", "carlos.jpg", "/Images/airport-2373727_1280.jpg"];
+let images =  ["/Images/glenn-carstens-peters-ZWD3Dx6aUJg-unsplash.jpg", "/Images/tird.jpg", "/Images/people.jpg", "/Images/andres.jpg", "/Images/carlos.jpg", "/Images/airport-2373727_1280.jpg"];
 let heroImage = document.getElementById("hero-image");
 const timeElement = document.getElementById("time");
 const now = new Date();
@@ -28,7 +28,7 @@ let currentIndex = 0;
 
    setInterval(() => {
     currentIndex = (currentIndex + 1) % images.length;
-    heroImage.classList.add("opacity-0");
+    heroImage.classList.add("opacity-100");
   
     setTimeout(() => {
       heroImage.src = images[currentIndex];
