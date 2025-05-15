@@ -1,5 +1,5 @@
 const text = "Welcome to Convert My Time!";
-let images =  ["/Images/glenn-carstens-peters-ZWD3Dx6aUJg-unsplash.jpg", "/Images/tird.jpg", "/Images/people.jpg", "/Images/andres.jpg", "/Images/carlos.jpg", "/Images/airport-2373727_1280.jpg", "/Images/pret.jpg", "/Images/building.jpg"];
+let images =  ["/Images/glenn-carstens-peters-ZWD3Dx6aUJg-unsplash.jpg", "/Images/tird.jpg", "/Images/people.jpg", "/Images/andres.jpg", "/Images/carlos.jpg", "/Images/airport-2373727_1280.jpg", "/Images/pret.jpg", "/Images/building.jpg", "/Images/map.jpg"];
 let heroImage = document.getElementById("hero-image");
 const timeElement = document.getElementById("time");
 const now = new Date();
