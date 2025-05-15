@@ -3,7 +3,15 @@ let images =  ["/Images/glenn-carstens-peters-ZWD3Dx6aUJg-unsplash.jpg", "/Image
 let heroImage = document.getElementById("hero-image");
 const timeElement = document.getElementById("time");
 const now = new Date();
-timeElement.innerHTML = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+setInterval(()=>{
+  timeElement.innerHTML = new Date().toLocaleDateString('en-US', {
+    weekday: 'short', 
+    hour: '2-digit',
+    timeZoneName: 'short',
+    minute: '2-digit',
+  });
+}, 1000);
+
 
 let currentIndex = 0;
   let i = 0;
