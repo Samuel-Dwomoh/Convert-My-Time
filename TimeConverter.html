@@ -39,10 +39,10 @@
     </header>
 
     <div class="flex justify-center items-center">
-    <form action="" class="border-2 rounded-2xl p-6 mt-14 w-xl">
+    <form action="" class="border-2 rounded-2xl p-6 mt-12 w-xl bg-gray-100">
         <h1 class="mb-3 font-bold text-xl">Time Converter</h1>
         <label for="timezone">From Timezone</label><br>
-        <select class="-ml-1 mt-1 rounded-lg h-9 w-full mb-3 pr-9" name="timezone" id="" required>
+        <select class="-ml-1 mt-1 rounded-full h-10 w-full mb-3 pr-9 bg-white focus:outline-1 focus:outline-gray-100" name="timezone" id="" required>
             <option value="" disabled selected>Select from here...</option>
             
               <!-- Africa -->
@@ -115,7 +115,7 @@
         </select><br>
 
         <label for="timezone">To Timezone</label><br>
-        <select class="-ml-1 mt-1 rounded-full h-9 w-full mb-3" name="timezone" id="" required>
+        <select class="-ml-1 mt-1 rounded-full h-10 w-full mb-3 pr-9 bg-white focus:outline-1 focus:outline-gray-100" name="timezone" id="" required>
           <option value="" disabled selected>Select from here...</option>
           
             <!-- Africa -->
@@ -187,7 +187,7 @@
           <option value="AEST">Australian Eastern Standard Time (AEST)</option>
       </select><br>
         <label for="">Enter Time</label><br>
-        <input class="mb-3 mt-2 w-full px-2 h-9" type="text" name="time" id="" required placeholder="HH:MM"><br>
+        <input class="-ml-1 mt-1 rounded-full h-10 w-full mb-3 pl-2 bg-white focus:outline-1 focus:outline-gray-100" type="text" name="time" id="" required placeholder="HH:MM"><br>
         <button class="w-full text-center mb-4 rounded-full h-9 bg-black text-white">Convert Time</button>
         <h1>Converted Time</h1>
         <span>something something GMT time converted</span>
