@@ -45,7 +45,7 @@ let currentIndex = 0;
 
 
 function calculate(){
-  time
+  
 }
 
   window.onload = typeWriter;
