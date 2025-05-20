@@ -48,9 +48,8 @@ let currentIndex = 0;
   
   if(time.length < 4 || time.length > 4 || time[2] !=":"){
    alert("Please enter valid time with format HH:MM");
-  } else {
-    return 1;
   }
+  
 
 function convertTImeToDate(){
   /** timeToRealTime = time.number();
