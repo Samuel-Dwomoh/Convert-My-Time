@@ -44,15 +44,93 @@ let currentIndex = 0;
     }, 0);
   }, 9000); 
   
+// Timezone offsets in hours relative to UTC
+const timezoneOffsets = {
+  WAT: 1,
+  CAT: 2,
+  SAST: 2,
+  EAT: 3,
+  GMT: 0,
+  NST: -3.5,
+  AST: -4,
+  EST: -5,
+  CST: -6,
+  MST: -7,
+  PST: -8,
+  AKST: -9,
+  HAST: -10,
+  ART: -3,
+  BRT: -3,
+  AMT: -4,
+  COT: -5,
+  CLT: -4,
+  ECT: -5,
+  GYT: -4,
+  PYT: -4,
+  PET: -5,
+  VET: -4,
+  IRST: 3.5,
+  AFT: 4.5,
+  PKT: 5,
+  IST: 5.5,
+  NPT: 5.75,
+  BST: 6,
+  MMT: 6.5,
+  ICT: 7,
+  CST: 8,
+  KST: 9,
+  JST: 9,
+  AWST: 8,
+  ACST: 9.5,
+  AEST: 10,
+  LHST: 10.5,
+  NZST: 12,
+  CHAST: 12.75,
+  FJT: 12,
+  TOT: 13,
+  SST: -11,
+  LINT: 14,
+  WET: 0,
+  CET: 1,
+  EET: 2,
+  MSK: 3,
+  CLST: -3,
+};
 
-function convertTImeToDate(){
-  /** timeToRealTime = time.number();
-  timeToRealTime.split("");
-  timeToRealTIme[1].textContent(":");
-  timeToRealTime.join();
-  console.log(timeToRealTime);
-  **/
+// Function to convert time
+function convertTime() {
+  const fromTimezone = document.getElementById("from-timezone").value;
+  const toTimezone = document.getElementById("to-timezone").value;
+  const timeInput = document.getElementById("time-input").value;
+  const convertedTimeElement = document.getElementById("converted-time");
+
+  if (!fromTimezone || !toTimezone || !timeInput) {
+    convertedTimeElement.textContent = "Please fill in all fields.";
+    return;
+  }
+
+  const [hours, minutes] = timeInput.split(":").map(Number);
+  if (isNaN(hours) || isNaN(minutes) || hours < 0 || hours > 23 || minutes < 0 || minutes > 59) {
+    convertedTimeElement.textContent = "Invalid time format. Use HH:MM.";
+    return;
+  }
+
+  const fromOffset = timezoneOffsets[fromTimezone];
+  const toOffset = timezoneOffsets[toTimezone];
+  const timeDifference = toOffset - fromOffset;
+
+  const date = new Date();
+  date.setHours(hours, minutes);
+  date.setHours(date.getHours() + timeDifference);
+
+  const convertedHours = date.getHours().toString().padStart(2, "0");
+  const convertedMinutes = date.getMinutes().toString().padStart(2, "0");
+
+  convertedTimeElement.textContent = `${convertedHours}:${convertedMinutes}`;
 }
+
+// Add event listener to the button
+document.getElementById("convert-button").addEventListener("click", convertTime);
 
   window.onload = typeWriter;
 
