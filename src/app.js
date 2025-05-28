@@ -99,6 +99,7 @@ const timezoneOffsets = {
 
 // Function to convert time
 function convertTime() {
+  //prevent the form from refreshing
   const fromTimezone = document.getElementById("from-timezone").value;
   const toTimezone = document.getElementById("to-timezone").value;
   const timeInput = document.getElementById("time-input").value;
