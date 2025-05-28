@@ -32,9 +32,10 @@ let currentIndex = 0;
       }, 7000); 
     }
   }
-   
-
-   setInterval(() => {
+  window.onload = typeWriter;
+  
+  
+  setInterval(() => {
     currentIndex = (currentIndex + 1) % images.length;
     heroImage.classList.add("opacity-100");
   
@@ -134,5 +135,4 @@ function convertTime() {
 // Add event listener to the button
 document.getElementById("convert-button").addEventListener("click", convertTime);
 
-  window.onload = typeWriter;
 
