@@ -135,4 +135,3 @@ function convertTime() {
 // Add event listener to the button
 document.getElementById("convert-button").addEventListener("click", convertTime);
 
-
