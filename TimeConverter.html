@@ -43,7 +43,7 @@
     <form action="" class="border-2 rounded-2xl p-6 mt-12 w-xl bg-gray-100">
         <h1 class="mb-3 font-bold text-xl">Time Converter</h1>
         <label for="timezone">From Timezone</label><br>
-        <select class="-ml-1 mt-1 rounded-full h-10 w-full mb-3 pl-2 bg-white focus:outline-1 focus:outline-gray-100" name="timezone" id="" required>
+        <select class="-ml-1 mt-1 rounded-full h-10 w-full mb-3 pl-2 bg-white focus:outline-1 focus:outline-gray-100" name="from-timezone" id="from-timezone" required>
             <option value="" disabled selected>Select from here...</option>
             
               <!-- Africa -->
@@ -115,8 +115,8 @@
             <option value="AEST">Australian Eastern Standard Time (AEST)</option>
         </select><br>
 
-        <label for="timezone">To Timezone</label><br>
-        <select class="-ml-1 mt-1 rounded-full h-10 w-full mb-3 pl-2 pr-2 bg-white focus:outline-1 focus:outline-gray-100" name="timezone" id="" required>
+        <label for="to-timezone">To Timezone</label><br>
+        <select class="-ml-1 mt-1 rounded-full h-10 w-full mb-3 pl-2 pr-2 bg-white focus:outline-1 focus:outline-gray-100" name="to-timezone" id="to-timezone" required>
           <option value="" disabled selected>Select from here...</option>
           
             <!-- Africa -->
@@ -187,11 +187,11 @@
           <option value="ART">Argentina Time (ART)</option>
           <option value="AEST">Australian Eastern Standard Time (AEST)</option>
       </select><br>
-        <label for="">Enter Time</label><br>
-        <input id="time" class="-ml-1 mt-1 rounded-full h-10 w-full mb-3 pl-4 bg-white focus:outline-1 focus:outline-gray-100" type="text" name="time" required placeholder="HH:MM"><br>
-        <button class="w-full text-center mb-4 rounded-full h-9 bg-black text-white">Convert Time</button>
+        <label for="time-input">Enter Time</label><br>
+        <input id="time-input" class="-ml-1 mt-1 rounded-full h-10 w-full mb-3 pl-4 bg-white focus:outline-1 focus:outline-gray-100" type="text" name="time" required placeholder="HH:MM"><br>
+        <button class="w-full text-center mb-4 rounded-full h-9 bg-black text-white" id="convert-button">Convert Time</button>
         <h1 class="font-bold text-lg">Converted Time</h1>
-        <span></span><br>
+        <span id="converted-time"></span><br>
       
     </form>
   </div>
