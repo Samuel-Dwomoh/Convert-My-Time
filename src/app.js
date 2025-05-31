@@ -34,6 +34,7 @@ let currentIndex = 0;
   }
   window.onload = typeWriter;
   
+// Function to change the hero image every 9 seconds
   
   setInterval(() => {
     currentIndex = (currentIndex + 1) % images.length;
