@@ -45,6 +45,7 @@ let currentIndex = 0;
       heroImage.classList.remove("opacity-0");
     }, 0);
   }, 9000); 
+   
   
 // Timezone offsets in hours relative to UTC
 const timezoneOffsets = {
