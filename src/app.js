@@ -8,10 +8,11 @@ const now = new Date();
 
 setInterval(()=>{
   timeElement.innerHTML = new Date().toLocaleDateString('en-US', {
-    weekday: 'short', 
+    weekday: 'long', 
     hour: '2-digit',
-    timeZoneName: 'short',
+    timeZoneName: 'long',
     minute: '2-digit',
+    second: '2-digit',
   });
 }, 1000);
 
