@@ -12,25 +12,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Convert My Time</title>
   </head>
-  <body class="bg-white text-gray-800">
+  <body class="bg-gray-50 text-gray-800">
 
-    <header id="gradient" class="pt-2 pb-3 fixed top-0 w-full rounded-bl-lg rounded-br-lg z-100">
+    <header class="pt-2 py-3 fixed top-0 w-full rounded-bl-lg rounded-br-lg z-100 backdrop-blur-md">
       <nav>
         <ul class="flex flex-wrap justify-between items-center mx-4 md:mx-9 text-white px-1">
       
           <!-- Left Section: Icon + Label -->
           <li class="flex items-center gap-2">
             <span class="mr-2" id="time"></span>
+            <!-- Temporary SVG Icon 
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path fill="currentColor" fill-rule="evenodd" d="M12 2.75a9.25 9.25 0 1 0 0 18.5a9.25 9.25 0 0 0 0-18.5M1.25 12C1.25 6.063 6.063 1.25 12 1.25S22.75 6.063 22.75 12S17.937 22.75 12 22.75S1.25 17.937 1.25 12M12 7.25a.75.75 0 0 1 .75.75v3.69l2.28 2.28a.75.75 0 1 1-1.06 1.06l-2.5-2.5a.75.75 0 0 1-.22-.53V8a.75.75 0 0 1 .75-.75" clip-rule="evenodd"/>
-            </svg>
-            <a href="#" class="text-white">Convert My Time</a>
+            </svg> 
+            <a href="#" class="text-white font-bold">Convert My Time</a>
+            -->
           </li>
       
           <!-- Right Section: Navigation Links -->
-          <div class="flex flex-wrap gap-4 md:gap-9">
+          <div class="flex flex-wrap gap-4 mt-1 md:gap-9">
             <li><a  class="" href="#">Home</a></li>
-            <li><a class="hover:bg-white hover:border-2" href="/TimeConverter.html">Time Converter</a></li>
+            <li><a class="px-2 py-2 rounded" id="gradient" href="/TimeConverter.html">Time Converter</a></li>
             <li><a href="#">About</a></li>
           </div>
       
@@ -41,7 +43,7 @@
     </header>
 
     
-    <div class="relative h-[60vh] md:h-[80vh] w-90% mt-14 mx-2">
+    <div class="relative h-[60vh] md:h-[80vh] w-90% mt-10 mx-2">
       <!-- Background Image -->
       <img id="hero-image" src="/public/Images/airport-2373727_1280.jpg" alt="Airport" class="absolute inset-0 w-full h-full object-cover z-0 rounded-bl-lg rounded-br-lg rounded-tr-lg rounded-tl-lg shadow-lg" />
       
