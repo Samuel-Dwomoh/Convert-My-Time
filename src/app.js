@@ -13,7 +13,7 @@ setInterval(()=>{
   timeElement.innerHTML = new Date().toLocaleDateString('en-US', {
     weekday: 'long', 
     hour: '2-digit',
-    timeZoneName: 'long',
+    timeZoneName: 'short',
     minute: '2-digit',
     second: '2-digit',
   });
@@ -51,7 +51,7 @@ let currentIndex = 0;
   }, 9000); 
   
   timeconverter.addEventListener("click", () => {
-    timeconverter.classList.add("text-white", "px-3", "py-2", "rounded");
+    timeconverter.classList.toggle("text-white", "px-3", "py-2", "rounded");
   });
   
 
