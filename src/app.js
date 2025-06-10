@@ -50,23 +50,17 @@ let currentIndex = 0;
     }, 0);
   }, 9000); 
   
-  timeconverter.addEventListener("click", () => {
-    timeconverter.classList.toggle("text-white", "px-3", "py-2", "rounded");
-  });
-  
-
-  
   /** timeconverter.addEventListener("mouseleave",()=>{
     timeconverter.classList.remove("text-red-500", "px-3", "py-2", "rounded");
-  })
+    })
     **/
-  
-  // Timezone offsets in hours relative to UTC
-const timezoneOffsets = {
-  WAT: 1,
-  CAT: 2,
-  SAST: 2,
-  EAT: 3,
+   
+   // Timezone offsets in hours relative to UTC
+   const timezoneOffsets = {
+     WAT: 1,
+     CAT: 2,
+     SAST: 2,
+     EAT: 3,
   GMT: 0,
   NST: -3.5,
   AST: -4,
@@ -122,31 +116,33 @@ function convertTime() {
   const toTimezone = document.getElementById("to-timezone").value;
   const timeInput = document.getElementById("time-input").value;
   const convertedTimeElement = document.getElementById("converted-time");
-
+  
   if (!fromTimezone || !toTimezone || !timeInput) {
     convertedTimeElement.textContent = "Please fill in all fields.";
     return;
   }
-
+  
   const [hours, minutes] = timeInput.split(":").map(Number);
   if (isNaN(hours) || isNaN(minutes) || hours < 0 || hours > 23 || minutes < 0 || minutes > 59) {
     convertedTimeElement.textContent = "Invalid time format. Use HH:MM.";
     return;
   }
-
+  
   const fromOffset = timezoneOffsets[fromTimezone];
   const toOffset = timezoneOffsets[toTimezone];
   const timeDifference = toOffset - fromOffset;
-
+  
   const date = new Date();
   date.setHours(hours, minutes);
   date.setHours(date.getHours() + timeDifference);
-
+  
   const convertedHours = date.getHours().toString().padStart(2, "0");
   const convertedMinutes = date.getMinutes().toString().padStart(2, "0");
-
+  
   convertedTimeElement.textContent = `${convertedHours}:${convertedMinutes}`;
+  convertedTimeElement.classList.add("text-blue-500", "text-lg", "ml-2");
 }
 
 // Add event listener to the button
 document.getElementById("convert-button").addEventListener("click", convertTime);
+
