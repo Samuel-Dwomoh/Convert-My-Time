@@ -6,7 +6,7 @@
   font-family: "Open Sans", sans-serif;
 }
 
-#gradient{
+.gradient{
   /**background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
   **/
   background-image: linear-gradient(to right, #2d6ccd, #636cdb, #916ae4, #bc63e6, #e658e2);
