@@ -12,6 +12,7 @@
   background-image: linear-gradient(to right, #2d6ccd, #636cdb, #916ae4, #bc63e6, #e658e2);
 }
 
+
 @keyframes blink {
     0%, 100% { opacity: 1 }
     50% { opacity: 0 }
