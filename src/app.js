@@ -1,6 +1,9 @@
 const text = "Welcome to Convert My Time!";
 const time = document.getElementById("time");
 let timeToRealTime = [];
+let timeconverter = document.getElementById("timeConverter");
+let home = document.getElementById("home")
+let about = document.getElementById("about");
 let images =  ["/Images/glenn-carstens-peters-ZWD3Dx6aUJg-unsplash.jpg", "/Images/tird.jpg", "/Images/people.jpg", "/Images/andres.jpg", "/Images/carlos.jpg", "/Images/airport-2373727_1280.jpg", "/Images/pret.jpg", "/Images/building.jpg", "/Images/map.jpg"];
 let heroImage = document.getElementById("hero-image");
 const timeElement = document.getElementById("time");
@@ -40,15 +43,25 @@ let currentIndex = 0;
   setInterval(() => {
     currentIndex = (currentIndex + 1) % images.length;
     heroImage.classList.add("opacity-100");
-  
+    
     setTimeout(() => {
       heroImage.src = images[currentIndex];
       heroImage.classList.remove("opacity-0");
     }, 0);
   }, 9000); 
-   
   
-// Timezone offsets in hours relative to UTC
+  timeconverter.addEventListener("click", () => {
+    timeconverter.classList.add("text-white", "px-3", "py-2", "rounded");
+  });
+  
+
+  
+  /** timeconverter.addEventListener("mouseleave",()=>{
+    timeconverter.classList.remove("text-red-500", "px-3", "py-2", "rounded");
+  })
+    **/
+  
+  // Timezone offsets in hours relative to UTC
 const timezoneOffsets = {
   WAT: 1,
   CAT: 2,
@@ -137,4 +150,3 @@ function convertTime() {
 
 // Add event listener to the button
 document.getElementById("convert-button").addEventListener("click", convertTime);
-
