@@ -1,3 +1,4 @@
+//Aos and animejs js swiper
 const text = "Welcome to Convert My Time!";
 const time = document.getElementById("time");
 let timeToRealTime = [];

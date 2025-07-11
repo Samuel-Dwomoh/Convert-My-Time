@@ -21,4 +21,6 @@
     animation: blink 1s step-start infinite;
   }
 
-  
+#new{
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.509), rgba(0, 0, 0, 0.176));
+}
